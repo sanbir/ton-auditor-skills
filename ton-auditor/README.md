@@ -2,6 +2,8 @@
 
 A security agent for **TON smart contracts**.
 
+Attribution: this fork keeps the v2 packaging and audit workflow lineage from [pashov/skills](https://github.com/pashov/skills), adapted for TON contracts.
+
 Built for:
 
 - **TON developers** who want fast feedback before shipping FunC or Tact changes
