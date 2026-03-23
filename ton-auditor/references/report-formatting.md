@@ -18,8 +18,6 @@ Save the report to `assets/findings/{project-name}-ton-ai-audit-report-{timestam
 | **Mode**                         | ALL / default / filename                               |
 | **Language**                     | FunC / Tact / Mixed                                    |
 | **Files reviewed**               | `File1.fc` · `File2.fc`<br>`File3.tact` · `File4.fc`  | <!-- list every file, 3 per line -->
-| **Attack vectors checked**       | 120 (across N agents)                                  |
-| **Agents deployed**              | N vector-scan + adversarial + protocol                 |
 | **Confidence threshold (1-100)** | N                                                      |
 
 ---
@@ -56,7 +54,20 @@ Save the report to `assets/findings/{project-name}-ton-ai-audit-report-{timestam
 ```
 ---
 
-< ... all findings >
+< ... all above-threshold findings >
+
+---
+
+[75] **3. <Title>**
+
+`contract::handler` · Confidence: 75
+
+**Description**
+<The vulnerable code pattern and why it is exploitable, in 1 short sentence>
+
+---
+
+< ... all below-threshold findings (description only, no Fix block) >
 
 ---
 
@@ -66,9 +77,16 @@ Findings List
 |---|---|---|
 | 1 | [95] | <title> |
 | 2 | [82] | <title> |
-| | | **Below Confidence Threshold** |
 | 3 | [75] | <title> |
-| 4 | [60] | <title> |
+
+---
+
+## Leads
+
+_Vulnerability trails with concrete code smells where the full exploit path could not be completed in one analysis pass. These are not false positives — they are high-signal leads for manual review. Not scored._
+
+- **<Title>** — `Contract::handler` — Code smells: <missing guard, unsafe arithmetic, etc.> — <1-2 sentence description of the trail and what remains unverified>
+- **<Title>** — `Contract::handler` — Code smells: <...> — <1-2 sentence description>
 
 ---
 
